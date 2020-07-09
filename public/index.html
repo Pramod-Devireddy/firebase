@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>క్లౌడ్ కాఫీ</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="కేఫ్ పేరు">
+            <input type="text" name="city" placeholder="కేఫ్ నగరం">
+            <button>జోడించు</button>
+        </form>
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAxVT6n_vTVw7VnlJcHIy1DtAf59vHMdeE",
+            authDomain: "isrosource.firebaseapp.com",
+            databaseURL: "https://isrosource.firebaseio.com",
+            projectId: "isrosource",
+            storageBucket: "isrosource.appspot.com",
+            messagingSenderId: "570772200134",
+            appId: "1:570772200134:web:868dc35433d4455f76d5c7",
+            measurementId: "G-1ZYNKMWY0L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
